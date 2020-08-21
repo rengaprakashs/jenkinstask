@@ -55,10 +55,14 @@
 				</configuration>
 				<executions>
 					<execution>
+						<id>default-descriptor</id>
+						<phase>process-classes</phase>
+					</execution>
+					<execution>
+						<id>help-goal</id>
 						<goals>
-							<goal>upload</goal>
+							<goal>helpmojo</goal>
 						</goals>
-						<phase>install</phase>
 					</execution>
 				</executions>
 			</plugin>
