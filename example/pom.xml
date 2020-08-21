@@ -45,7 +45,7 @@
 		<plugins>
 			<plugin>
 				<groupId>com.github.github</groupId>
-				<artifactId>downloads-maven-plugin</artifactId>
+				<artifactId>maven-plugin</artifactId>
 				<version>0.6</version>
 				<configuration>
 					<description>Official ${project.name} build of the ${project.version} release</description>
