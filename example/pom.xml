@@ -44,24 +44,22 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>com.github.github</groupId>
-				<artifactId>maven-plugins</artifactId>
-				<version>3.3.1</version>
-				<configuration>
-					<description>Official ${project.name} build of the ${project.version} release</description>
-					<override>true</override>
-					<includeAttached>true</includeAttached>
-					<server>github</server>
-				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-plugin-plugin</artifactId>
+				<version>3.6.0</version>
 				<executions>
 					<execution>
+						<id>default-descriptor</id>
+						<phase>process-classes</phase>
+					</execution>
+					<execution>
+						<id>help-goal</id>
 						<goals>
-							<goal>upload</goal>
+							<goal>helpmojo</goal>
 						</goals>
-						<phase>install</phase>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin>>
 			<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>site-maven-plugin</artifactId>
